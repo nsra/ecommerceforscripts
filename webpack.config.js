@@ -43,6 +43,21 @@ module.exports = {
             },
             {
                 test: /\.(sa|sc|c)ss$/,
+                exclude: /bootstrap\.min\.css$/i,
+                use: [
+                    // "style-loader",
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                        options: {
+                            esModule: false,
+                        },
+                    },
+                    'css-loader',
+                ]
+            },
+
+            {
+                test:  /bootstrap\.min\.css$/,
                 use: [
                     // "style-loader",
                     {
@@ -54,6 +69,7 @@ module.exports = {
                     'rtlcss-loader',
                 ]
             },
+            
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
                 type: 'asset/resource',
@@ -61,13 +77,13 @@ module.exports = {
                     filename: "./images/[name][ext]",
                 },
             },
-            // {
-            //     test: /\.(svg|eot|woff|woff2|ttf)$/,
-            //     type: 'asset/resource',
-            //     generator: {
-            //         filename: "./fonts/[name][ext]",
-            //     },
-            // },
+            {
+                test: /\.(svg|eot|woff|woff2|ttf)$/,
+                type: 'asset/resource',
+                generator: {
+                    filename: "./fonts/[name][ext]",
+                },
+            },
 
         ]
     },
