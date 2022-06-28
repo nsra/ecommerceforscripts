@@ -25,7 +25,8 @@ body {
     /* padding-bottom: 15px; */
 }
 
-.custom-form-control, .custom-btn {
+.custom-form-control,
+.custom-btn {
     border: 1px solid #EBEBEB;
     box-shadow: none;
     border-radius: 2px;
@@ -34,19 +35,19 @@ body {
 
     /* height:  38px;
     padding: 6px 16px 7px 16px; */
-  }
+}
 
-  .custom-btn:hover{
+.custom-btn:hover {
     background-color: #d4d4d4;
     border: 1px solid #8c8c8c;
     color: #FF3956
-  }
+}
 
-  .custom-btn:focus{
+.custom-btn:focus {
     color: #FF3956
-  }
+}
 
-  .categories .nav-link {
+.categories .nav-link {
     border-right: 0;
 }
 
@@ -109,7 +110,7 @@ body {
     background-color: transparent;
     border-radius: 2px;
     /* margin-top: 10px; */
-    margin-right: 15px; 
+    margin-right: 15px;
     font-size: 14px;
 }
 
@@ -121,4 +122,99 @@ body {
 .custom-form-control:focus {
     border-color: #C2101E;
     box-shadow: 0 0 2px 0 #C2101E;
-} 
+}
+
+/* المنتجات المميزة */
+#carousel-featured {
+    background-color: #F7F8F3;
+    height: 400px;
+    padding-top: 25px;
+}
+
+#carousel-featured .carousel-item img {
+    height: 375px;
+}
+
+#carousel-featured .product-details {
+    border: 1px solid #DDDDDB;
+    padding: 20px;
+    position: relative;
+    top: 50px;
+    height: 200px;
+    background-color: #F7F8F3;
+}
+
+#carousel-featured .product-details .product-category {
+    border: 1px solid #DDDDDB;
+    padding: 10px;
+    position: absolute !important;
+    top: -10px;
+    right: -10px;
+    background-color: #F7F8F3;
+}
+
+#carousel-featured .product-details h1 {
+    font-weight: 700;
+    font-size: 175%;
+    margin-top: 18px;
+}
+
+.custom-btn-primary {
+    background-color: transparent;
+    border-color: #f8ad47;
+    color: #f8ad47
+}
+
+#carousel-featured .product-details a {
+    margin-top: 15px;
+}
+
+.sale {
+    background-color: #53CCD7;
+    color: white;
+    font-weight: bold;
+    position: absolute;
+}
+
+.sale.large {
+    height: 60px;
+    width: 60px;
+    padding: 35px;
+    font-size: 130%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(-25deg);
+    flex-direction: column;
+    line-height: 90%;
+    left: -15px;
+    top: -15px;
+}
+
+.custom-carousel-indicators-primary img{
+    opacity: 1 !important;
+    height: 70px !important;
+    width: 70px !important;
+    border: 2px solid #DDDDDB !important;
+    /* background-color: #fff; */
+    margin: 0px !important;
+}
+
+/* refere to top start bottom end */
+.custom-carousel-indicators-primary {
+    top: 235px;
+    right: 41%;
+}
+
+.custom-carousel-indicators-primary img.active {
+    border-color: #F8AD47;
+}
+
+#carousel-featured .carousel-control-prev .fa-chevron-right,
+#carousel-featured .carousel-control-next .fa-chevron-left {
+    color: #868686;
+    font-size: 38px;
+    cursor: pointer;
+}
+
