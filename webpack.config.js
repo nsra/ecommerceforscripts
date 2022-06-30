@@ -19,7 +19,7 @@ module.exports = {
             directory: path.join(__dirname, 'dist'),
         },
         compress: true,
-        port: 9003,
+        port: 9004,
         devMiddleware: {
             writeToDisk: true,
         }
