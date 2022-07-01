@@ -246,12 +246,56 @@ h3.custom-heading {
     margin-bottom: 25px;
 }
 
+.custom-carousel-indicators-primary img{
+    opacity: 1 !important;
+    height: 70px !important;
+    width: 70px !important;
+    border: 2px solid #DDDDDB !important;
+    /* background-color: #fff; */
+    margin: 0px !important;
+}
+
+.custom-carousel-indicators [data-bs-target] {
+    height: 13px;
+    width: 13px;
+    margin: 2px;
+    background-color: #dbdbdb;
+}
+
+/* refere to top start bottom end */
+.custom-carousel-indicators-primary {
+    top: 235px;
+    right: 41%;
+}
+
+.custom-carousel-indicators-primary img.active {
+    border-color: #F8AD47;
+}
+
+.custom-carousel-indicators>li {
+    height: 13px;
+    width: 13px;
+    margin: 2px;
+    background-color: #dbdbdb;
+}
+
+.custom-carousel-indicators>li.active {
+    background-color: #565656;
+}
+
+
 /* الأكثر مبيعًا */
 .custom-thumbnail {
     border: 2px solid #EEF0EA;
     padding: 8px;
     cursor: pointer;
     margin-bottom: 20px;
+}
+
+.custom-thumbnail img {
+    height: 250px;
+    width: 100%;
+    max-width: 250px;
 }
 
 .custom-thumbnail:hover {
@@ -291,66 +335,32 @@ h3.custom-heading {
     opacity: 1;
 }
 
+.add-to-cart-btn {
+    background-color: #fff;
+    color: #19becd;
+    font-weight: 700;
+}
+
 .custom-thumbnail .sale {
     padding: 5px 10px;
     position: absolute;
     left: 16px;
-    /* right: 16px; */
     top: 14px;
-    /* direction: ltr; */
 }
 
-.custom-thumbnail .sale::before {
+.custom-thumbnail .sale::after {
     content: '-';
 }
 
-/* #carousel-most-sold .carousel-indicators {
-    position: static;
-} */
-
-.custom-carousel-indicators-primary img{
-    opacity: 1 !important;
-    height: 70px !important;
-    width: 70px !important;
-    border: 2px solid #DDDDDB !important;
-    /* background-color: #fff; */
-    margin: 0px !important;
-}
-
-.custom-carousel-indicators [data-bs-target] {
-    height: 13px;
-    width: 13px;
-    margin: 2px;
-    background-color: #dbdbdb;
-}
-
-/* refere to top start bottom end */
-.custom-carousel-indicators-primary {
-    top: 235px;
-    right: 41%;
-}
-
-.custom-carousel-indicators-primary img.active {
-    border-color: #F8AD47;
-}
-
 .custom-carousel-indicators>li {
-    height: 13px;
-    width: 13px;
-    margin: 2px;
-    background-color: #dbdbdb;
+    height: 13px!important;
+    width: 13px!important;
+    margin: 2px!important;
+    background-color: #dbdbdb!important;
 }
 
 .custom-carousel-indicators>li.active {
-    background-color: #565656;
-}
-
-.custom-thumbnail img {
-    height: 250px;
-    width: 100%;
-    max-width: 250px;
-    margin: 0 auto;
-    display: block;
+    background-color: #565656 !important;
 }
 
 @media (min-width: 1200px) {
