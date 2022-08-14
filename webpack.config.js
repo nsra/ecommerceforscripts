@@ -102,6 +102,11 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: "css/style.css"
         }),
+
+        new HtmlWebpackPlugin({
+            filename: "checkout.html",
+            template: "./src/checkout.html",
+        }),
         
         new CssMinimizerWebpackPlugin({}),
     ],

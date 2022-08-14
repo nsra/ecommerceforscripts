@@ -496,7 +496,6 @@ Product Page
 *****************
 **************************************************************/
 /*عناصر التنقل الفرعية*/
-/*عناصر التنقل الفرعية*/
 .custom-breadcrumb {
     padding: 25px 0;
 }
@@ -627,6 +626,82 @@ Product Page
 CHECKOUT PAGE
 *****************
 **************************************************************/
+h1.heading {
+    font-size: 36px;
+    margin-bottom: 25px;
+}
+
+.custom-table img {
+    width: 80px;
+    height: 80px;
+    border: 1px solid #EBEBEB;
+    margin-left: 10px;
+}
+
+.custom-table th {
+    color: #C2C2C2;
+    font-weight: normal;
+}
+
+.custom-table th,
+.custom-table td {
+    padding: 15px;
+    font-size: 120%;
+    /* vertical-align: middle; */
+    border-bottom: 1px solid #EBEBEB;
+    border-top: 1px solid #EBEBEB;
+}
+
+.custom-table th:first-child,
+.custom-table td:first-child {
+    width: 50%;
+}
+
+.custom-table th:not(:first-child),
+.custom-table td:not(:first-child) {
+    text-align: center;
+}
+
+.custom-table h4 {
+    font-size: 18px;
+    margin: 12px 0;
+}
+
+.custom-table .quantity {
+    width: 55px !important;
+    height: 35px !important;
+    text-align: center;
+}
+
+.custom-table .custom-media {
+    margin-right: 10px;
+}
+
+.custom-btn-outline-danger {
+    color: #ff5a5f;
+    border-color: #ff5a5f;
+    background-color: transparent;
+}
+
+.custom-btn-outline-danger:hover,
+.custom-btn-outline-danger:focus,
+.custom-btn-outline-danger:active,
+.custom-btn-outline-danger:active:hover,
+.custom-btn-outline-danger:active:focus,
+.custom-btn-outline-danger:hover:disabled {
+    color: #C2101E;
+    border-color: #C2101E;
+    background-color: transparent;
+}
+
+.custom-table tfoot td {
+    border-bottom: none;
+    font-size: 150%;
+}
+
+#total-price-for-all-products {
+    color: #000;
+}
 
 /**************************************************************
 ****************
@@ -820,9 +895,9 @@ MEDIA QUERY
     }
 
     /*checkout page*/
-    /* .hide-on-small {
+    .hide-on-small {
         display: none;
-    } */
+    }
 }
 
 @media (max-width:575px) {
