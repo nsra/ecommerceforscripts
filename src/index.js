@@ -1,6 +1,11 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/style.css';
 import '@fortawesome/fontawesome-free/js/all.min';
+import $ from 'jquery';
+import 'webpack-jquery-ui';
+import 'webpack-jquery-ui/css';
+import 'jquery-ui-touch-punch/jquery.ui.touch-punch.min.js';
+
 window.bootstrap = require('bootstrap/dist/js/bootstrap.bundle.js');
 
 document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(item => new bootstrap.Tooltip(item))
@@ -10,6 +15,7 @@ document.querySelectorAll('.add-to-cart-btn').forEach(item => {
         alert('أضيف المُنتج إلى عربة الشراء')
     })
 })
+
 document.getElementById('copyright').innerHTML= "جميع الحقوق محفوظة للمتجر سنة " + new Date().getFullYear()
 
 document.querySelectorAll(['.color-option input[type="radio"]']).forEach(item => {
@@ -66,3 +72,72 @@ function calculateTotalPrice() {
     // حدث السعر الإجمالي لكل المُنتجات في الصفحة    
     document.getElementById("total-price-for-all-products").innerHTML = totalPriceForAllProducts + '$';
 }
+
+
+const citiesByCountry = {
+    sa: ['الرياض', 'جدة'],
+    eg: ['القاهرة', 'الإسكندرية'],
+    jo: ['عمان', 'الزرقاء'],
+    sy: ['دمشق', 'حلب', 'حماه']
+};
+
+document.querySelectorAll('select[name="country"]').forEach(item => {
+    item.addEventListener('change', () => {
+        // جلب الدولة
+        const country = item.value;
+
+        // جلب مدن الدولة من المصفوفة
+        const cities = citiesByCountry[country];
+
+        // تفريغ قائمة المدن
+        document.querySelectorAll('#paymentcities option').forEach(option => option.remove());
+
+        // إضافة خيار اختر مدينة لعنصر اختيار المدينة
+        const firstOption = document.createElement('option');
+        const optionText = document.createTextNode('اختر المدينة');
+        firstOption.appendChild(optionText);
+        firstOption.setAttribute('value', '');
+        firstOption.setAttribute('disabled', 'true');
+        firstOption.setAttribute('selected', 'true');
+        const city_options= document.getElementById('paymentcities');
+        city_options.appendChild(firstOption);
+
+        // إضافة المدن إلى قائمة المدن
+        cities.forEach((city) =>  {
+            const newOption = document.createElement('option');
+            const optionText = document.createTextNode(city);
+            newOption.appendChild(optionText);
+            newOption.setAttribute('value', city);
+            city_options.appendChild(newOption);
+        });
+    })
+})
+
+// إخفاء حقول البطاقة عند تغيير طريقة الدفع إلى عند الاستلام 
+document.querySelectorAll('#form-checkout input[name="payment_method"]').forEach(item => {
+    item.addEventListener('change', () => {
+        const paymentMethod = item.value;
+        const credit_card_inputs = document.querySelectorAll('#credit-card-info input');
+        if (paymentMethod === 'on_delivery') {
+            credit_card_inputs.forEach(input => input.style.display ='none')
+        }
+        else {
+            credit_card_inputs.forEach(input => input.style.display = 'block')            
+        }
+    })
+})
+
+$(function () {
+    $("#price-range").slider({
+        range: true,
+        min: 50,
+        max: 1000,
+        step: 50,
+        values: [250, 800],
+        slide: function (event, ui) {
+            $('#price-min').text(ui.values[0]);
+            $('#price-max').text(ui.values[1]);
+        }
+    });
+})
+
