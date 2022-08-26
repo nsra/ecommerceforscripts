@@ -28,6 +28,13 @@ module.exports = {
     module: {
         rules: [
             {
+                test: require.resolve('jquery'),
+                loader: 'expose-loader',
+                options: {
+                    exposes: ['$', 'jQuery'],
+                }
+            },
+            {
                 test: /\.html$/,
                 loader: "html-loader",
                 options: {
@@ -109,6 +116,11 @@ module.exports = {
         new HtmlWebpackPlugin({
             filename: "search.html",
             template: "./src/search.html",
+        }),
+
+        new HtmlWebpackPlugin({
+            filename: "contact.html",
+            template: "./src/contact.html",
         }),
         
         new CssMinimizerWebpackPlugin({}),

@@ -808,6 +808,29 @@ SEARCH PAGE
 
 /**************************************************************
 ****************
+CONTACT PAGE
+*****************
+**************************************************************/
+#map {
+    padding: 0;
+}
+
+#contact-options h4 {
+    font-size: 18px;
+}
+
+#contact-info .fa-lg {
+    color: #f3af41;
+    margin: 10px 0px 0px 10px;
+}
+
+#contact-options textarea {
+    height: 105px !important;
+}
+
+
+/**************************************************************
+****************
 MEDIA QUERY
 *****************
 **************************************************************/
@@ -932,6 +955,22 @@ MEDIA QUERY
         height: 20px !important;
         width: 20px !important;
         top: -10px !important;
+    }
+    
+    #search-pagination {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* contact page */
+    #form-subscription {
+        margin-bottom: 25px;
+    }
+
+    #contact-options input[name=name]
+    {
+        margin-bottom: 15px;
     }
 
 }
