@@ -648,7 +648,6 @@ h1.heading {
 .custom-table td {
     padding: 15px;
     font-size: 120%;
-    /* vertical-align: middle; */
     border-bottom: 1px solid #EBEBEB;
     border-top: 1px solid #EBEBEB;
 }
@@ -709,9 +708,6 @@ h1.heading {
 PAYMENT PAGE
 *****************
 **************************************************************/
-/* #credit-card-info {
-    margin-right: 3%;
-} */
 
 .custom-input-details {
     border-width: 2px;
@@ -894,10 +890,6 @@ MEDIA QUERY
         margin-top: 15px;
         padding-top: 8px;
     } 
-
-    /* #carousel-featured .carousel-indicators {
-        right: auto!important;
-    } */
     
     #carousel-featured .carousel-indicators {
         margin-right: 4%;
